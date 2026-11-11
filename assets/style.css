@@ -76,7 +76,7 @@ h2{font-size:clamp(1.7rem,5vw,2.55rem);margin:14px 0 10px}
 
 /* HERO CAROUSEL */
 .hero{position:relative;margin:0 0 8px;overflow:hidden}
-.hero-viewport{position:relative;aspect-ratio:4/5;max-height:78vh;min-height:420px;background:#0b0d16}
+.hero-viewport{position:relative;width:100%;aspect-ratio:4/5;max-height:78vh;min-height:420px;background:#0b0d16}
 .hero-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .7s var(--ease),visibility .7s;color:#fff}
 .hero-slide.is-active{opacity:1;visibility:visible;z-index:1}
 .hero-slide .hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
