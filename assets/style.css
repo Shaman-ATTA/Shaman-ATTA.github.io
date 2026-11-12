@@ -226,3 +226,42 @@ h2{font-size:clamp(1.7rem,5vw,2.55rem);margin:14px 0 10px}
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   #bg{opacity:.28}
 }
+
+/* --- added: news, support, press, video, tester --- */
+.hit{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;left:0;bottom:0}
+.tester .steps{grid-template-columns:1fr}
+@media (min-width:900px){.tester .steps,.steps.three{grid-template-columns:1fr 1fr 1fr}}
+.steps li .btn{margin-top:12px}
+.video-box{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.video-box video{width:100%;max-width:340px;aspect-ratio:9/16;border-radius:18px;background:#000;border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.video-box p{flex:1;min-width:220px;color:var(--muted)}
+.news-list{display:grid;gap:16px;margin-top:22px}
+.news-item{padding:20px 22px}
+.news-item time{display:block;font-size:.85rem;color:var(--muted);margin-bottom:6px}
+.news-item h2,.news-item h3{font-size:1.2rem;margin:0 0 8px}
+.news-item p{color:var(--muted);margin:0}
+.news-item .links{margin-top:12px}
+.news-item img.thumb{width:56px;height:56px;border-radius:12px;float:right;margin:0 0 8px 14px}
+.faq{display:grid;gap:12px;margin-top:18px}
+.faq details{padding:16px 20px}
+.faq summary{cursor:pointer;font-weight:700;list-style-position:outside}
+.faq details p{margin:10px 0 0;color:var(--muted)}
+.beta-games{display:grid;gap:16px;margin-top:18px}
+@media (min-width:900px){.beta-games{grid-template-columns:1fr 1fr 1fr}}
+.beta-game{padding:20px;display:flex;flex-direction:column;gap:10px}
+.beta-game .gcard-head h3{margin:0}
+.beta-game p{color:var(--muted);margin:0}
+.beta-game .btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.facts{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 18px;margin:12px 0 0}
+.press-game{min-width:0;overflow-wrap:anywhere}
+@media (max-width:600px){.facts{grid-template-columns:minmax(0,1fr);gap:2px}.facts dd{margin-bottom:8px}}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.press-game{padding:22px;margin-top:18px}
+.press-game .shots{display:flex;gap:10px;overflow-x:auto;margin-top:12px;padding-bottom:6px}
+.press-game .shots img{height:150px;width:auto;border-radius:10px;flex:none}
+.press-game h3{margin-top:16px}
+.dl-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.policy-list{display:grid;gap:12px;margin-top:18px}
+.policy-list a.panel{display:flex;align-items:center;gap:14px;padding:16px 18px;text-decoration:none}
+.policy-list img{width:44px;height:44px;border-radius:10px}

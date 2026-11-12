@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-page="home" data-title-en="ATTA CORP — Indie Mobile Games" data-title-ru="ATTA CORP — инди-игры для телефона" data-desc-en="ATTA CORP is an indie studio making original mobile games: Block Fill, Chroma Shift, Rustroot and Crownless." data-desc-ru="ATTA CORP is an indie studio making original mobile games: Block Fill, Chroma Shift, Rustroot and Crownless.">
+<html lang="en" data-page="home" data-title-en="ATTA CORP — Indie Mobile Games" data-title-ru="ATTA CORP — инди-игры для телефона" data-desc-en="ATTA CORP is an indie studio making original mobile games: Block Fill, Chroma Shift, Rustroot and Crownless." data-desc-ru="ATTA CORP — независимая студия мобильных игр: Block Fill, Chroma Shift, Rustroot и Crownless.">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -12,6 +12,8 @@
 <link rel="apple-touch-icon" href="assets/blockfill-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ATTA CORP">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
 <meta property="og:title" content="ATTA CORP — Indie Mobile Games">
 <meta property="og:description" content="ATTA CORP is an indie studio making original mobile games: Block Fill, Chroma Shift, Rustroot and Crownless.">
 <meta property="og:url" content="https://shaman-atta.github.io/">
@@ -28,6 +30,7 @@
     <a class="brand" href="index.html"><img src="assets/favicon.svg" alt="" width="28" height="28">ATTA CORP</a>
     <ul class="tabs" id="tabs">
       <li><a href="games.html" data-i18n="nav.games">Games</a></li>
+      <li><a href="news.html" data-i18n="nav.news">News</a></li>
       <li><a href="about.html" data-i18n="nav.about">About</a></li>
       <li><a href="beta.html" data-i18n="nav.beta">Join the beta</a></li>
       <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
@@ -67,11 +70,11 @@
       <div class="hero-caption">
         <div class="hero-card">
           <img class="hero-icon" src="assets/chromashift-icon.png" alt="" width="76" height="76">
-          <span class="status test" data-i18n="games.testing">In testing — join the beta</span>
+          <span class="status test" data-i18n="games.testing">Closed beta on Google Play</span>
           <h2>Chroma Shift</h2>
           <p class="tagline" data-i18n="cs.tag">Tap cells. Shift colors. Clear the board.</p>
           <div class="hero-actions">
-            <a class="btn btn-beta" href="beta.html" data-i18n="games.beta">Join the beta</a>
+            <a class="btn btn-beta" href="beta.html#chroma-shift" data-i18n="games.beta">Become a tester</a>
             <a class="btn btn-ghost" href="games/chroma-shift.html" data-i18n="home.learn">Learn more</a>
           </div>
         </div>
@@ -82,11 +85,11 @@
       <div class="hero-caption">
         <div class="hero-card">
           <img class="hero-icon" src="assets/rustroot-icon.png" alt="" width="76" height="76">
-          <span class="status dev" data-i18n="games.dev">In development — coming soon</span>
+          <span class="status test" data-i18n="games.testing">Closed beta on Google Play</span>
           <h2>Rustroot</h2>
           <p class="tagline" data-i18n="rr.tag">A colony at the end of the world.</p>
           <div class="hero-actions">
-            <span class="btn btn-soon" aria-disabled="true" data-i18n="games.soon">Coming soon</span>
+            <a class="btn btn-beta" href="beta.html#rustroot" data-i18n="games.beta">Become a tester</a>
             <a class="btn btn-ghost" href="games/rustroot.html" data-i18n="home.learn">Learn more</a>
           </div>
         </div>
@@ -97,11 +100,11 @@
       <div class="hero-caption">
         <div class="hero-card">
           <img class="hero-icon" src="assets/crownless-icon.png" alt="" width="76" height="76">
-          <span class="status dev" data-i18n="games.dev">In development — coming soon</span>
+          <span class="status test" data-i18n="games.testing">Closed beta on Google Play</span>
           <h2>Crownless</h2>
           <p class="tagline" data-i18n="cl.tag">A crown without a master.</p>
           <div class="hero-actions">
-            <span class="btn btn-soon" aria-disabled="true" data-i18n="games.soon">Coming soon</span>
+            <a class="btn btn-beta" href="beta.html#crownless" data-i18n="games.beta">Become a tester</a>
             <a class="btn btn-ghost" href="games/crownless.html" data-i18n="home.learn">Learn more</a>
           </div>
         </div>
@@ -146,7 +149,7 @@
       <img src="assets/chromashift-icon.png" alt="" width="48" height="48">
       <div>
         <h3>Chroma Shift</h3>
-        <span class="status test" data-i18n="games.testing">In testing — join the beta</span>
+        <span class="status test" data-i18n="games.testing">Closed beta on Google Play</span>
       </div>
     </div>
     <p data-i18n="cs.short">A relaxing color puzzle. Soft palettes, no timers, pure flow.</p>
@@ -160,7 +163,7 @@
       <img src="assets/rustroot-icon.png" alt="" width="48" height="48">
       <div>
         <h3>Rustroot</h3>
-        <span class="status dev" data-i18n="games.dev">In development — coming soon</span>
+        <span class="status test" data-i18n="games.testing">Closed beta on Google Play</span>
       </div>
     </div>
     <p data-i18n="rr.short">A mobile colony survival sim. Salvage, farm, build and hold off raiders.</p>
@@ -174,13 +177,42 @@
       <img src="assets/crownless-icon.png" alt="" width="48" height="48">
       <div>
         <h3>Crownless</h3>
-        <span class="status dev" data-i18n="games.dev">In development — coming soon</span>
+        <span class="status test" data-i18n="games.testing">Closed beta on Google Play</span>
       </div>
     </div>
     <p data-i18n="cl.short">Lead a nameless exile: raise an army, win real-time battles and take back the crown.</p>
     <ul class="chips"><li data-i18n="chip.strategy">Strategy</li><li data-i18n="chip.battles">Real-time battles</li><li data-i18n="chip.world">Open world</li></ul>
   </div>
 </a></div>
+</section>
+<section class="section wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow"><i></i><span data-i18n="nav.news">News</span></span>
+      <h2 data-i18n="home.news">Latest news</h2>
+    </div>
+    <a class="btn btn-ghost" href="news.html" data-i18n="home.allnews">All news</a>
+  </div>
+  <div class="news-list">
+  <article class="panel news-item" id="n1"><img class="thumb" src="assets/blockfill-icon.png" alt="" width="56" height="56" loading="lazy">
+    <time datetime="2026-11-12">Nov 12, 2026</time>
+    <h3 data-i18n="n1.t">Block Fill 1.0.4 sent to Google Play review</h3>
+    <p data-i18n="n1.b">Version 1.0.4 fixes the Remove Ads button in Settings: it now shows the price when Google Play has loaded it, or a clear message if purchases are not available yet. The update will roll out once Google approves it.</p>
+    <div class="links"><a class="btn btn-ghost" href="games/block-fill.html" data-i18n="home.learn">Learn more</a></div>
+  </article>
+  <article class="panel news-item" id="n2"><img class="thumb" src="assets/blockfill-icon.png" alt="" width="56" height="56" loading="lazy">
+    <time datetime="2026-11-12">Nov 12, 2026</time>
+    <h3 data-i18n="n2.t">Block Fill 1.0.3 is live on Google Play</h3>
+    <p data-i18n="n2.b">Stability and purchase fixes. The game now re-checks your purchases with Google Play, so Remove Ads stays tied to your Google account.</p>
+    <div class="links"><a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.blockfill.puzzle.offline" rel="noopener" target="_blank" data-i18n="games.play">Get it on Google Play</a></div>
+  </article>
+  <article class="panel news-item" id="n3"><img class="thumb" src="assets/crownless-icon.png" alt="" width="56" height="56" loading="lazy">
+    <time datetime="2026-11-12">Nov 12, 2026</time>
+    <h3 data-i18n="n3.t">Crownless closed beta: testers wanted</h3>
+    <p data-i18n="n3.b">Crownless: Medieval Kingdoms is in free closed testing on Google Play (build 0.21.2). Raise an army, fight lords and bandits and win back your family’s lost crown. We would love feedback on crashes, performance, the tutorial and battle balance.</p>
+    <div class="links"><a class="btn btn-ghost" href="games/crownless.html#video" data-i18n="video.title">Gameplay video</a><a class="btn btn-ghost" href="beta.html#crownless" data-i18n="games.beta">Become a tester</a><a class="btn btn-ghost" href="https://shamany.itch.io/crownless/devlog/1771791/crownless-closed-beta-on-google-play-testers-wanted" rel="noopener" target="_blank" data-i18n="news.devlog">Read the devlog on itch.io</a></div>
+  </article>
+  </div>
 </section>
 <section class="section wrap">
   <div class="panel cta-band">
@@ -215,15 +247,18 @@
       <h3 data-i18n="footer.studio">Studio</h3>
       <ul>
         <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="news.html" data-i18n="nav.news">News</a></li>
         <li><a href="beta.html" data-i18n="nav.beta">Join the beta</a></li>
-        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="press.html" data-i18n="footer.press">Press kit</a></li>
+        <li><a href="support/block-fill.html" data-i18n="footer.support">Support</a></li>
         <li><a href="terms.html" data-i18n="footer.terms">Terms of Use</a></li>
-        <li><a href="https://docs.google.com/document/d/e/2PACX-1vQFyx_OraATnVTC8bk7JEnLfzms0jhiuWvJHve6IIbQMuECAtlIIs1EeHyM6qAs9jxGlwM6PNDAX3Y2/pub" rel="noopener" target="_blank" data-i18n="contact.privacy">Privacy Policy</a></li>
+        <li><a href="privacy/index.html" data-i18n="contact.privacy">Privacy Policy</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h3 data-i18n="footer.contact">Contact</h3>
       <ul>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         <li><a href="mailto:gamerazrabplay@gmail.com">gamerazrabplay@gmail.com</a></li>
       </ul>
     </div>
@@ -232,10 +267,11 @@
     <span data-i18n="footer.copy">© 2026 ATTA CORP. All rights reserved. Block Fill, Chroma Shift, Rustroot, Crownless and the ATTA CORP name and logos are property of ATTA CORP.</span>
     <span class="footer-links">
       <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQFyx_OraATnVTC8bk7JEnLfzms0jhiuWvJHve6IIbQMuECAtlIIs1EeHyM6qAs9jxGlwM6PNDAX3Y2/pub" rel="noopener" target="_blank" data-i18n="contact.privacy">Privacy Policy</a>
+      <a href="privacy/index.html" data-i18n="contact.privacy">Privacy Policy</a>
     </span>
   </div>
 </footer>
+<img class="hit" src="https://hits.sh/shaman-atta.github.io/index.svg" alt="" width="1" height="1" referrerpolicy="no-referrer" aria-hidden="true"><img class="hit" src="https://hits.sh/shaman-atta.github.io.svg" alt="" width="1" height="1" referrerpolicy="no-referrer" aria-hidden="true">
 <script src="assets/app.js" defer></script>
 </body>
 </html>
