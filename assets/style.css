@@ -52,6 +52,11 @@ img{max-width:100%;height:auto;display:block}
 .btn-ghost{color:var(--fg);border-color:var(--line);background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .btn-ghost:hover{color:#fff;transform:translateY(-2px);background:rgba(255,255,255,.1)}
 .btn-beta{color:#0b0d16;background:linear-gradient(135deg,var(--amber),var(--coral))}
+.btn-kofi{color:#1a1208;background:linear-gradient(135deg,#ffe08a,#ffb347);box-shadow:0 8px 28px rgba(255,179,71,.28)}
+.btn-kofi:hover{color:#1a1208;transform:translateY(-2px);box-shadow:0 12px 36px rgba(255,207,106,.4)}
+.btn-kofi svg{width:18px;height:18px;flex-shrink:0}
+.footer-brand .btn-kofi{align-self:flex-start;margin-top:6px;padding:10px 16px;font-size:.88rem}
+
 .btn-beta:hover{color:#0b0d16;transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,111,115,.4)}
 .btn-soon{color:var(--muted);border-color:var(--line);background:rgba(255,255,255,.04);cursor:default;pointer-events:none}
 .play-badge{display:inline-block;line-height:0;transition:transform .25s var(--ease)}
