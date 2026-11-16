@@ -8,12 +8,12 @@ nav{font-size:.9em;margin-bottom:18px}nav a{margin-inline-end:12px;color:#0f4c43
 footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:dark){body{background:#101413;color:#e4e7e5}h1,h2,nav a{color:#7fd1bf}th{background:#1c2624}td,th{border-color:#33403d}code{background:#222}}</style></head>
 <body><nav><a href="../" lang="en">English</a> <a href="../ru/" lang="ru">Русский</a> <a href="../he/" lang="he">עברית</a> <a href="../es/" lang="es">Español</a> <a href="../de/" lang="de">Deutsch</a> <a href="../fr/" lang="fr">Français</a></nav>
 <h1>ATTA Aid — Política de privacidad</h1>
-<p><strong>Fecha de entrada en vigor:</strong> 16 de noviembre de 2026 · <strong>App:</strong> ATTA Aid (Android, paquete <code>com.attacorp.aid</code>) · <strong>Desarrollador:</strong> ATTA CORP (desarrollador de Google Play «ATTA») · <strong>Contacto:</strong> gamerazrabplay@gmail.com</p>
+<p><strong>Fecha de entrada en vigor:</strong> 16 de noviembre de 2026 · <strong>Última actualización:</strong> 16 de noviembre de 2026 (versión de la app 0.4.0) · <strong>App:</strong> ATTA Aid (Android, paquete <code>com.attacorp.aid</code>) · <strong>Desarrollador:</strong> ATTA CORP (desarrollador de Google Play «ATTA») · <strong>Contacto:</strong> gamerazrabplay@gmail.com</p>
 <h2>Resumen</h2>
 <ul>
 <li>ATTA Aid <strong>no tiene anuncios, cuentas, servidores, analíticas ni ID de publicidad</strong>. Nosotros (el desarrollador) no recibimos ningún dato tuyo salvo que decidas escribirnos por correo.</li>
 <li>Guías, herramientas, progreso, ajustes y tu <strong>grupo de edad</strong> se quedan <strong>en tu teléfono</strong>.</li>
-<li>El <strong>chat sin conexión</strong> opcional envía tu <strong>apodo, un ID de dispositivo aleatorio, tus mensajes y —solo si lo eliges— tu ubicación GPS en un SOS</strong> directamente a <strong>teléfonos cercanos</strong> por Bluetooth / Wi-Fi. Los teléfonos cercanos pueden <strong>reenviar</strong> mensajes (hasta 5 saltos). El canal abierto <strong>no tiene cifrado de extremo a extremo</strong>; los mensajes de <strong>grupo</strong> se cifran con la clave del grupo.</li>
+<li>El <strong>chat sin conexión</strong> opcional envía tu <strong>apodo, un ID de dispositivo aleatorio, tus mensajes y —solo si lo eliges— tu ubicación GPS en un SOS</strong> directamente a <strong>teléfonos cercanos</strong> por Bluetooth / Wi-Fi. <strong>No hay servidores.</strong> Los teléfonos cercanos pueden <strong>reenviar</strong> mensajes (hasta 5 saltos). <strong>Los mensajes directos tienen cifrado de extremo a extremo</strong> (solo el destinatario puede leerlos), los mensajes de <strong>grupo</strong> se cifran con la clave del grupo, y el canal <strong>«Todos los cercanos»</strong> y los <strong>SOS</strong> <strong>no se cifran</strong> a propósito, para que todos los cercanos puedan leerlos.</li>
 <li>ATTA Aid está pensada para usuarios <strong>de 13 años o más</strong> y <strong>no está dirigida a menores de 13</strong>. Si aun así la usa un menor (por ejemplo, en una excursión escolar supervisada), un <strong>modo infantil</strong> integrado limita el chat a un <strong>grupo</strong> creado por un adulto, después de que un <strong>padre, madre o docente</strong> lo active.</li>
 </ul>
 <h2>1. Datos que se quedan en tu dispositivo</h2>
@@ -37,7 +37,7 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <td>Solo en tu teléfono. Excluidos de la copia de seguridad.</td>
 </tr>
 <tr>
-<td>Historial del chat, apodo, ID aleatorio, nombre y clave del grupo, usuarios bloqueados, denuncias</td>
+<td>Historial del chat, apodo, ID aleatorio, tu <strong>par de claves</strong> del chat (la clave privada está protegida por el almacén de claves de Android), claves públicas de las personas con quienes chateas, nombre y clave del grupo, usuarios bloqueados, denuncias</td>
 <td>Hacer funcionar el chat sin conexión</td>
 <td>Solo en tu teléfono. <strong>Excluidos</strong> de la copia en la nube de Android y de la transferencia entre dispositivos.</td>
 </tr>
@@ -48,14 +48,15 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <p>Al activar el chat, la app usa <strong>Google Nearby Connections</strong> (parte de los servicios de Google Play) para conectarse directamente a teléfonos cercanos con ATTA Aid, <strong>sin internet</strong>. Envía:</p>
 <ul>
 <li>tu <strong>apodo</strong> y un <strong>ID de dispositivo aleatorio</strong> creado por la app (no tu número, nombre ni cuenta de Google). En usuarios menores de 13 el apodo <strong>no</strong> se difunde a desconocidos: solo se envía dentro del grupo cifrado;</li>
+<li>la <strong>clave pública del chat</strong> de tu teléfono: al iniciarse por primera vez, cada teléfono crea un par de claves aleatorio para el cifrado de extremo a extremo. La clave privada nunca sale del teléfono; la clave pública se difunde a los teléfonos cercanos para que puedan enviarte mensajes directos cifrados. No está vinculada a tu nombre, número de teléfono ni cuenta de Google;</li>
 <li>el <strong>texto de tus mensajes</strong>, su hora y tipo;</li>
 <li>en un <strong>SOS</strong>, tus <strong>coordenadas GPS y su precisión, solo si dejas activado «Incluir mi ubicación»</strong> (desactivado por defecto para menores de 13). Antes de enviar un SOS eliges a quién: todos los cercanos, tu grupo o una persona.</li>
 </ul>
 <p><strong>Quién lo ve:</strong></p>
 <ul>
-<li><strong>Todos los cercanos</strong> (solo 13+) y los SOS para todos: cualquiera cerca con la app puede verlos y otros teléfonos pueden <strong>reenviarlos</strong> hasta 5 saltos. <strong>No tienen cifrado de extremo a extremo.</strong></li>
-<li>Los mensajes de <strong>grupo</strong> y los mensajes directos entre miembros del grupo se cifran (AES-GCM) con una clave que solo se comparte mediante el QR / código del grupo. Los teléfonos que reenvían no pueden leerlos. Quien tenga el código del grupo puede leer sus mensajes, así que compártelo solo con el grupo.</li>
-<li>Otros mensajes directos solo se muestran al destinatario, pero no tienen cifrado de extremo a extremo y los teléfonos que reenvían podrían leerlos técnicamente. <strong>No envíes secretos.</strong></li>
+<li><strong>Todos los cercanos</strong> (solo 13+) y <strong>SOS</strong>: <strong>no se cifran</strong> a propósito, para que todos los cercanos puedan leerlos rápido. Cualquiera cerca con la app puede verlos y otros teléfonos pueden <strong>reenviarlos</strong> hasta 5 saltos. No publiques secretos ahí.</li>
+<li>Los mensajes de <strong>grupo</strong> se cifran (AES-GCM) con una clave que solo se comparte mediante el QR / código del grupo. Los teléfonos que reenvían no pueden leerlos. Quien tenga el código del grupo puede leer sus mensajes, así que compártelo solo con el grupo.</li>
+<li>Los <strong>mensajes directos</strong> tienen <strong>cifrado de extremo a extremo</strong> (acuerdo de claves X25519 + AES-256-GCM): solo el teléfono del destinatario puede leerlos; tu apodo y el texto viajan solo dentro del mensaje cifrado. Los teléfonos que reenvían los transmiten, pero no pueden leerlos ni modificarlos; solo ven los ID de dispositivo del remitente y del destinatario y la hora. Un mensaje directo solo se envía cuando se conoce la clave pública del destinatario. En cada chat directo podéis comparar en persona un <strong>código de seguridad</strong> para comprobar que nadie ha cambiado las claves.</li>
 </ul>
 <p><strong>No podemos borrar mensajes</strong> de los teléfonos de otras personas, porque no hay servidor. Los servicios de Google Play gestionan la conexión de radio; consulta la <a href="https://policies.google.com/privacy?hl=es">Política de privacidad de Google</a>.</p>
 <p><strong>Nota técnica:</strong> el enlace Bluetooth / Wi-Fi entre dos teléfonos está cifrado por Nearby Connections. Según Google, cuando las apps usan el SDK de Nearby, los servicios de Google Play recopilan estadísticas de uso (latencia de descubrimiento y conexión, fiabilidad y rendimiento, junto con modelo de dispositivo, país, versión de compilación y nombre del paquete); puedes permitirlo o no en <strong>Ajustes → Google → Uso y diagnóstico</strong> (<a href="https://developers.google.com/nearby/connections/overview">fuente</a>). Lo hacen los servicios de Google Play, no ATTA Aid, y no incluye mensajes.</p>
@@ -94,7 +95,7 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <li><strong>California (CCPA/CPRA):</strong> derecho a saber, borrar y corregir. <strong>No vendemos ni compartimos información personal</strong> ni mostramos anuncios. No te discriminaremos por ejercer tus derechos.</li>
 </ul>
 <h2>10. Seguridad y conservación</h2>
-<p>Los datos del teléfono están protegidos por el aislamiento de apps de Android. Los mensajes de grupo se cifran con AES-GCM; el canal abierto no tiene cifrado de extremo a extremo. Los datos del dispositivo se conservan hasta que los borres; denuncias y comentarios por correo, hasta 12 meses.</p>
+<p>Los datos del teléfono están protegidos por el aislamiento de apps de Android; tu clave privada del chat está protegida además por el almacén de claves de Android. Los mensajes directos tienen cifrado de extremo a extremo (X25519 + AES-256-GCM); los mensajes de grupo se cifran con AES-GCM con la clave del grupo; el canal «Todos los cercanos» y los SOS no se cifran a propósito. Los datos del dispositivo se conservan hasta que los borres; denuncias y comentarios por correo, hasta 12 meses.</p>
 <h2>11. Información de salud</h2>
 <p>ATTA Aid es una guía educativa y <strong>no es un producto sanitario</strong>. No diagnostica, trata, cura ni previene ninguna enfermedad, y no pide ni guarda datos de salud. Busca siempre ayuda médica profesional.</p>
 <h2>12. Cambios</h2>

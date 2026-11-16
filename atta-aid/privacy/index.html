@@ -8,12 +8,12 @@ nav{font-size:.9em;margin-bottom:18px}nav a{margin-inline-end:12px;color:#0f4c43
 footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:dark){body{background:#101413;color:#e4e7e5}h1,h2,nav a{color:#7fd1bf}th{background:#1c2624}td,th{border-color:#33403d}code{background:#222}}</style></head>
 <body><nav><a href="" lang="en">English</a> <a href="ru/" lang="ru">Русский</a> <a href="he/" lang="he">עברית</a> <a href="es/" lang="es">Español</a> <a href="de/" lang="de">Deutsch</a> <a href="fr/" lang="fr">Français</a></nav>
 <h1>ATTA Aid — Privacy Policy</h1>
-<p><strong>Effective date:</strong> 16 November 2026 · <strong>App:</strong> ATTA Aid (Android, package <code>com.attacorp.aid</code>) · <strong>Developer:</strong> ATTA CORP (Google Play developer “ATTA”) · <strong>Contact:</strong> gamerazrabplay@gmail.com</p>
+<p><strong>Effective date:</strong> 16 November 2026 · <strong>Last updated:</strong> 16 November 2026 (app version 0.4.0) · <strong>App:</strong> ATTA Aid (Android, package <code>com.attacorp.aid</code>) · <strong>Developer:</strong> ATTA CORP (Google Play developer “ATTA”) · <strong>Contact:</strong> gamerazrabplay@gmail.com</p>
 <h2>Short version</h2>
 <ul>
 <li>ATTA Aid has <strong>no ads, no accounts, no servers, no analytics and no advertising ID</strong>. We (the developer) do not receive any of your data unless you choose to e-mail us.</li>
 <li>Guides, tools, progress, settings and your <strong>age group</strong> stay <strong>on your phone</strong>.</li>
-<li>The optional <strong>offline chat</strong> sends your <strong>nickname, a random device ID, your messages and — only if you choose — your SOS GPS location</strong> directly to <strong>phones nearby</strong> over Bluetooth / Wi-Fi. Phones nearby can <strong>relay</strong> messages (up to 5 hops). The open channel is <strong>not end-to-end encrypted</strong>; <strong>group</strong> messages are encrypted with the group key.</li>
+<li>The optional <strong>offline chat</strong> sends your <strong>nickname, a random device ID, your messages and — only if you choose — your SOS GPS location</strong> directly to <strong>phones nearby</strong> over Bluetooth / Wi-Fi. There are <strong>no servers</strong>. Phones nearby can <strong>relay</strong> messages (up to 5 hops). <strong>Direct messages are end-to-end encrypted</strong> (only the recipient can read them), <strong>group</strong> messages are encrypted with the group key, and the <strong>“Everyone nearby”</strong> channel and <strong>SOS</strong> are intentionally <strong>not encrypted</strong>, so everyone nearby can read them.</li>
 <li>ATTA Aid is intended for users <strong>13 and older</strong> and is <strong>not directed at children under 13</strong>. If a younger person uses it anyway (for example on a supervised school trip), a built-in <strong>child mode</strong> limits chat to a <strong>group</strong> created by an adult, after a <strong>parent or teacher</strong> turns chat on.</li>
 </ul>
 <h2>1. Data that stays on your device</h2>
@@ -37,7 +37,7 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <td>Only on your phone. Excluded from backup.</td>
 </tr>
 <tr>
-<td>Chat history, nickname, random chat device ID, group name and key, blocked users, reports</td>
+<td>Chat history, nickname, random chat device ID, your chat <strong>key pair</strong> (the private key is protected by the Android Keystore), public keys of people you chat with, group name and key, blocked users, reports</td>
 <td>To run the offline chat</td>
 <td>Only on your phone. <strong>Excluded</strong> from Android cloud backup and device-to-device transfer.</td>
 </tr>
@@ -48,14 +48,15 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <p>When you turn the chat on, the app uses <strong>Google Nearby Connections</strong> (part of Google Play services) to connect directly to other phones nearby that run ATTA Aid — <strong>without the internet</strong>. It sends:</p>
 <ul>
 <li>your <strong>nickname</strong> and a <strong>random device ID</strong> created by the app (not your phone number, name or Google account). For users under 13 the nickname is <strong>not</strong> broadcast to strangers — it is sent only inside the encrypted group;</li>
+<li>your phone's <strong>public chat key</strong>: on first start each phone creates a random key pair for end-to-end encryption. The private key never leaves the phone; the public key is broadcast to nearby phones so they can send you encrypted direct messages. It is not linked to your name, phone number or Google account;</li>
 <li>the <strong>text of your messages</strong>, their time, and message type;</li>
 <li>for an <strong>SOS</strong>, your <strong>GPS coordinates and accuracy — only if you leave “Include my location” on</strong> (off by default for users under 13). Before sending an SOS you choose who gets it: everyone nearby, your group, or one person.</li>
 </ul>
 <p><strong>Who can see it:</strong></p>
 <ul>
-<li><strong>Everyone nearby</strong> (13+ only) and SOS sent to everyone: anyone nearby running the app can see them, and other phones can <strong>relay</strong> them up to 5 hops. These messages are <strong>not end-to-end encrypted</strong>.</li>
-<li><strong>Group</strong> messages and direct messages between group members are encrypted (AES-GCM) with a key shared only through the group's QR / code. Relaying phones forward them but cannot read them. Anyone who has the group code can read group messages, so share it only with the group.</li>
-<li>Other direct messages are shown only in the recipient's app, but are not end-to-end encrypted, so relaying phones could technically read them. <strong>Do not send secrets.</strong></li>
+<li><strong>Everyone nearby</strong> (13+ only) and <strong>SOS</strong>: these are intentionally <strong>not encrypted</strong>, so that everyone nearby can read them quickly. Anyone nearby running the app can see them, and other phones can <strong>relay</strong> them up to 5 hops. Do not post secrets there.</li>
+<li><strong>Group</strong> messages are encrypted (AES-GCM) with a key shared only through the group's QR / code. Relaying phones forward them but cannot read them. Anyone who has the group code can read group messages, so share it only with the group.</li>
+<li><strong>Direct messages</strong> are <strong>end-to-end encrypted</strong> (X25519 key agreement + AES-256-GCM): only the recipient's phone can read them; your nickname and text travel only inside the encrypted message. Relaying phones forward them but cannot read or change them; they can only see the sender and recipient device IDs and the time. A direct message is sent only once the recipient's public key is known. In each direct chat you can compare a <strong>safety code</strong> in person to check that nobody swapped the keys.</li>
 </ul>
 <p><strong>We cannot delete messages</strong> from other people's phones, because there is no server. Google Play services processes the radio connection; see the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 <p><strong>Technical note:</strong> the Bluetooth / Wi-Fi link between two phones is encrypted by Nearby Connections. According to Google, when apps use the Nearby SDK, Google Play services collects usage analytics (discovery and connection latency, reliability and throughput, together with device model, country, build version and the app package name); you can allow or deny this in <strong>Settings → Google → Usage &amp; diagnostics</strong> (<a href="https://developers.google.com/nearby/connections/overview">source</a>). This is done by Google Play services, not by ATTA Aid, and does not include messages.</p>
@@ -94,7 +95,7 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <li><strong>California (CCPA/CPRA):</strong> the right to know, delete and correct. <strong>We do not sell or share personal information</strong> and show no ads. We will not discriminate against you for exercising your rights.</li>
 </ul>
 <h2>10. Security and retention</h2>
-<p>Data on your phone is protected by Android app sandboxing. Group messages are encrypted with AES-GCM; the open channel is not end-to-end encrypted. On-device data is kept until you delete it; e-mailed reports and feedback up to 12 months.</p>
+<p>Data on your phone is protected by Android app sandboxing; your private chat key is additionally protected by the Android Keystore. Direct messages are end-to-end encrypted (X25519 + AES-256-GCM); group messages are encrypted with AES-GCM using the group key; the “Everyone nearby” channel and SOS are intentionally not encrypted. On-device data is kept until you delete it; e-mailed reports and feedback up to 12 months.</p>
 <h2>11. Health information</h2>
 <p>ATTA Aid is an educational guide and <strong>not a medical device</strong>. It does not diagnose, treat, cure, or prevent any medical condition, and it does not ask for or store health data. Always seek professional medical help.</p>
 <h2>12. Changes</h2>
