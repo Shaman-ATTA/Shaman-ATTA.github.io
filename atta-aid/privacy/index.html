@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATTA Aid — Privacy Policy</title><style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 60px;line-height:1.6;color:#1b1f1e;background:#fbfaf7}
+h1{color:#0f4c43;font-size:1.8em;margin-bottom:.2em}h2{color:#0f4c43;margin-top:1.8em;font-size:1.2em}
+table{border-collapse:collapse;width:100%;font-size:.95em}td,th{border:1px solid #d6d3cc;padding:8px;vertical-align:top}th{background:#eef3f1}
+nav{font-size:.9em;margin-bottom:18px}nav a{margin-inline-end:12px;color:#0f4c43}a{color:#1e6fd9}code{background:#eee;padding:1px 4px;border-radius:4px}
+footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:dark){body{background:#101413;color:#e4e7e5}h1,h2,nav a{color:#7fd1bf}th{background:#1c2624}td,th{border-color:#33403d}code{background:#222}}</style></head>
+<body><nav><a href="" lang="en">English</a> <a href="ru/" lang="ru">Русский</a> <a href="he/" lang="he">עברית</a> <a href="es/" lang="es">Español</a> <a href="de/" lang="de">Deutsch</a> <a href="fr/" lang="fr">Français</a></nav>
+<h1>ATTA Aid — Privacy Policy</h1>
+<p><strong>Effective date:</strong> 16 November 2026 · <strong>App:</strong> ATTA Aid (Android, package <code>com.attacorp.aid</code>) · <strong>Developer:</strong> ATTA CORP (Google Play developer “ATTA”) · <strong>Contact:</strong> gamerazrabplay@gmail.com</p>
+<h2>Short version</h2>
+<ul>
+<li>ATTA Aid has <strong>no ads, no accounts, no servers, no analytics and no advertising ID</strong>. We (the developer) do not receive any of your data unless you choose to e-mail us.</li>
+<li>Guides, tools, progress, settings and your <strong>age group</strong> stay <strong>on your phone</strong>.</li>
+<li>The optional <strong>offline chat</strong> sends your <strong>nickname, a random device ID, your messages and — only if you choose — your SOS GPS location</strong> directly to <strong>phones nearby</strong> over Bluetooth / Wi-Fi. Phones nearby can <strong>relay</strong> messages (up to 5 hops). The open channel is <strong>not end-to-end encrypted</strong>; <strong>group</strong> messages are encrypted with the group key.</li>
+<li>ATTA Aid is intended for users <strong>13 and older</strong> and is <strong>not directed at children under 13</strong>. If a younger person uses it anyway (for example on a supervised school trip), a built-in <strong>child mode</strong> limits chat to a <strong>group</strong> created by an adult, after a <strong>parent or teacher</strong> turns chat on.</li>
+</ul>
+<h2>1. Data that stays on your device</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Why</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Learning progress, quiz scores, go-bag checklist, language and theme</td>
+<td>To show your progress and remember settings</td>
+<td>Only on your phone. May be included in your own Android backup (Google account), which you control.</td>
+</tr>
+<tr>
+<td>Age group (“under 13” or “13 and over” — <strong>not</strong> your birth year) and a scrambled (hashed) parent PIN</td>
+<td>To switch on child protections</td>
+<td>Only on your phone. Excluded from backup.</td>
+</tr>
+<tr>
+<td>Chat history, nickname, random chat device ID, group name and key, blocked users, reports</td>
+<td>To run the offline chat</td>
+<td>Only on your phone. <strong>Excluded</strong> from Android cloud backup and device-to-device transfer.</td>
+</tr>
+</tbody>
+</table>
+<p>You can delete chat history in <strong>Chat → Settings → Clear history</strong>, and all app data by clearing the app's storage in Android settings or uninstalling the app.</p>
+<h2>2. Offline chat (nearby phones)</h2>
+<p>When you turn the chat on, the app uses <strong>Google Nearby Connections</strong> (part of Google Play services) to connect directly to other phones nearby that run ATTA Aid — <strong>without the internet</strong>. It sends:</p>
+<ul>
+<li>your <strong>nickname</strong> and a <strong>random device ID</strong> created by the app (not your phone number, name or Google account). For users under 13 the nickname is <strong>not</strong> broadcast to strangers — it is sent only inside the encrypted group;</li>
+<li>the <strong>text of your messages</strong>, their time, and message type;</li>
+<li>for an <strong>SOS</strong>, your <strong>GPS coordinates and accuracy — only if you leave “Include my location” on</strong> (off by default for users under 13). Before sending an SOS you choose who gets it: everyone nearby, your group, or one person.</li>
+</ul>
+<p><strong>Who can see it:</strong></p>
+<ul>
+<li><strong>Everyone nearby</strong> (13+ only) and SOS sent to everyone: anyone nearby running the app can see them, and other phones can <strong>relay</strong> them up to 5 hops. These messages are <strong>not end-to-end encrypted</strong>.</li>
+<li><strong>Group</strong> messages and direct messages between group members are encrypted (AES-GCM) with a key shared only through the group's QR / code. Relaying phones forward them but cannot read them. Anyone who has the group code can read group messages, so share it only with the group.</li>
+<li>Other direct messages are shown only in the recipient's app, but are not end-to-end encrypted, so relaying phones could technically read them. <strong>Do not send secrets.</strong></li>
+</ul>
+<p><strong>We cannot delete messages</strong> from other people's phones, because there is no server. Google Play services processes the radio connection; see the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<p><strong>Technical note:</strong> the Bluetooth / Wi-Fi link between two phones is encrypted by Nearby Connections. According to Google, when apps use the Nearby SDK, Google Play services collects usage analytics (discovery and connection latency, reliability and throughput, together with device model, country, build version and the app package name); you can allow or deny this in <strong>Settings → Google → Usage &amp; diagnostics</strong> (<a href="https://developers.google.com/nearby/connections/overview">source</a>). This is done by Google Play services, not by ATTA Aid, and does not include messages.</p>
+<h2>3. Children</h2>
+<p>ATTA Aid is intended for users <strong>13 and older</strong> and is <strong>not directed at children under 13</strong>. Because it may still be used by younger people under adult supervision (for example on a school trip), it includes a protective <strong>child mode</strong>. At first launch the app shows a <strong>neutral age question</strong> (birth year, or “prefer not to say”). Only the resulting age group is stored, on the phone. If no age is given, the app treats the user as a child.</p>
+<p>For users <strong>under 13</strong>:</p>
+<ul>
+<li>the open <strong>“Everyone nearby”</strong> chat and messages to strangers are <strong>off</strong>; they can chat only in a <strong>group</strong> created by a teacher or parent (13+) and in direct messages with members of that group;</li>
+<li>chat stays off until an <strong>adult</strong> confirms with their birth year and sets a <strong>parent PIN</strong> in <strong>Settings → Parental controls</strong>; the adult can turn chat off again at any time;</li>
+<li>a <strong>safety reminder</strong> is shown before the first message;</li>
+<li>their nickname is shared only inside the encrypted group;</li>
+<li><strong>SOS</strong> remains available to everyone for safety; SOS location is <strong>off by default</strong> and is only sent if the child chooses it;</li>
+<li>the group owner (teacher) can see the member list and <strong>remove</strong> members, which creates a new group key.</li>
+</ul>
+<p>The app has <strong>no ads, no analytics SDK and no advertising ID</strong>, and we do not collect any personal information from children on our servers (we have none). Only nearby phones receive what is described in section 2. Parents can delete everything by clearing app data or uninstalling. We designed this mode with the US Children's Online Privacy Protection Act (COPPA), the EU/UK GDPR rules for children (including Art. 8) and the Israeli Protection of Privacy Law in mind. If you believe a child sent us personal data by e-mail, contact us and we will delete it.</p>
+<h2>4. Location</h2>
+<ul>
+<li><strong>My coordinates</strong> tool: your location is shown on screen only and is not stored or sent.</li>
+<li><strong>SOS in chat:</strong> your coordinates are sent only if you choose to include them.</li>
+<li>On Android 11 and older, Android requires the location permission to scan for nearby Bluetooth devices; the app does not use it to track you.</li>
+</ul>
+<h2>5. Reports and blocking</h2>
+<p>You can report a message or block a person (long-press a message). Reports and blocks are stored <strong>on your phone only</strong>; the reported message is hidden for you. If you choose <strong>“send by e-mail”</strong>, your e-mail app sends us the report, including the reported nickname, device ID and message text, plus your e-mail address. We use reports only to improve safety in the app, keep them for up to 12 months and then delete them.</p>
+<h2>6. Support the project and feedback</h2>
+<p>There are <strong>no ads and no paid features</strong>. In <strong>Settings → Support the project</strong> you can rate the app on Google Play, share a link, or e-mail us feedback (your e-mail app sends us your message and address; we use it only to reply and delete it within 12 months). If we enable optional <strong>tips</strong> (voluntary in-app donations) in a future version, payment is handled entirely by <strong>Google Play Billing</strong>; we receive only an order confirmation, not your card details. Tips are hidden for users under 13 and unlock nothing.</p>
+<h2>7. Permissions</h2>
+<p>Bluetooth and Nearby devices / Wi-Fi (offline chat) · Location (coordinates, SOS, Bluetooth scan on old Android) · Notifications (new messages, background relay) · Camera is <strong>not</strong> requested (group QR codes are opened with your phone's own camera app) · Wake lock (keep the screen on for SOS signal). All permissions are optional; the guides work without them.</p>
+<h2>8. Legal bases (GDPR / UK GDPR)</h2>
+<p>Running the chat you turn on — <strong>performance of the service you request</strong> and our <strong>legitimate interest</strong> in providing it; sharing SOS location — <strong>your consent</strong> (or, for a child, the vital interests of the person in danger), which you can withdraw at any time; enabling chat for a child under 13 — <strong>consent of the parent or teacher</strong> given in the app; handling e-mailed reports and feedback — <strong>legitimate interest</strong> in keeping the community safe and answering you.</p>
+<h2>9. Your rights</h2>
+<p>Because we hold no data on servers, most data is only on your device, where you can view and delete it yourself. For anything you sent us by e-mail you can contact gamerazrabplay@gmail.com:</p>
+<ul>
+<li><strong>EU/EEA/UK (GDPR):</strong> access, rectification, erasure, restriction, objection, portability, withdrawal of consent, and a complaint to your data protection authority.</li>
+<li><strong>Israel (Protection of Privacy Law, 5741-1981):</strong> the right to review and correct information about you; complaints to the Privacy Protection Authority.</li>
+<li><strong>USA (COPPA):</strong> parents can ask us to review or delete any information their child sent us and refuse further collection.</li>
+<li><strong>California (CCPA/CPRA):</strong> the right to know, delete and correct. <strong>We do not sell or share personal information</strong> and show no ads. We will not discriminate against you for exercising your rights.</li>
+</ul>
+<h2>10. Security and retention</h2>
+<p>Data on your phone is protected by Android app sandboxing. Group messages are encrypted with AES-GCM; the open channel is not end-to-end encrypted. On-device data is kept until you delete it; e-mailed reports and feedback up to 12 months.</p>
+<h2>11. Health information</h2>
+<p>ATTA Aid is an educational guide and <strong>not a medical device</strong>. It does not diagnose, treat, cure, or prevent any medical condition, and it does not ask for or store health data. Always seek professional medical help.</p>
+<h2>12. Changes</h2>
+<p>We will post changes on this page and update the effective date. Significant changes (for example, enabling tips) will also be shown in the app.</p>
+<h2>Contact</h2>
+<p>ATTA CORP — gamerazrabplay@gmail.com</p>
+<footer>© 2026 ATTA CORP · ATTA Aid</footer></body></html>
