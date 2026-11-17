@@ -8,13 +8,15 @@ nav{font-size:.9em;margin-bottom:18px}nav a{margin-inline-end:12px;color:#0f4c43
 footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:dark){body{background:#101413;color:#e4e7e5}h1,h2,nav a{color:#7fd1bf}th{background:#1c2624}td,th{border-color:#33403d}code{background:#222}}</style></head>
 <body><nav><a href="" lang="en">English</a> <a href="ru/" lang="ru">Русский</a> <a href="he/" lang="he">עברית</a> <a href="es/" lang="es">Español</a> <a href="de/" lang="de">Deutsch</a> <a href="fr/" lang="fr">Français</a></nav>
 <h1>ATTA Aid — Privacy Policy</h1>
-<p><strong>Effective date:</strong> 16 November 2026 · <strong>Last updated:</strong> 16 November 2026 (app version 0.4.0) · <strong>App:</strong> ATTA Aid (Android, package <code>com.attacorp.aid</code>) · <strong>Developer:</strong> ATTA CORP (Google Play developer “ATTA”) · <strong>Contact:</strong> gamerazrabplay@gmail.com</p>
+<p><strong>Effective date:</strong> 16 November 2026 · <strong>Last updated:</strong> 17 November 2026 (app version 0.5.7) · <strong>App:</strong> ATTA Aid (Android, package <code>com.attacorp.aid</code>) · <strong>Developer:</strong> ATTA CORP (Google Play developer “ATTA”) · <strong>Contact:</strong> gamerazrabplay@gmail.com</p>
 <h2>Short version</h2>
 <ul>
 <li>ATTA Aid has <strong>no ads, no accounts, no servers, no analytics and no advertising ID</strong>. We (the developer) do not receive any of your data unless you choose to e-mail us.</li>
 <li>Guides, tools, progress, settings and your <strong>age group</strong> stay <strong>on your phone</strong>.</li>
 <li>The optional <strong>offline chat</strong> sends your <strong>nickname, a random device ID, your messages and — only if you choose — your SOS GPS location</strong> directly to <strong>phones nearby</strong> over Bluetooth / Wi-Fi. There are <strong>no servers</strong>. Phones nearby can <strong>relay</strong> messages (up to 5 hops). <strong>Direct messages are end-to-end encrypted</strong> (only the recipient can read them), <strong>group</strong> messages are encrypted with the group key, and the <strong>“Everyone nearby”</strong> channel and <strong>SOS</strong> are intentionally <strong>not encrypted</strong>, so everyone nearby can read them.</li>
 <li>ATTA Aid is intended for users <strong>13 and older</strong> and is <strong>not directed at children under 13</strong>. If a younger person uses it anyway (for example on a supervised school trip), a built-in <strong>child mode</strong> limits chat to a <strong>group</strong> created by an adult, after a <strong>parent or teacher</strong> turns chat on.</li>
+<li><strong>New in 0.5.0:</strong> you can share your <strong>location</strong> in a chat or SOS, and turn on a <strong>group radar</strong> — always by your own choice, encrypted in groups and direct chats. An optional <strong>medical card</strong> stays <strong>encrypted on your phone</strong>. The <strong>offline map</strong> downloads map tiles once from <strong>OpenFreeMap</strong> (the tile server sees your IP address, like any website); nothing else goes online.</li>
+<li><strong>New in 0.5.7:</strong> optional <strong>emergency SMS contacts</strong> stay <strong>only on your phone</strong> and are excluded from backup. If you tick “Send SMS too” on an SOS, the app opens your <strong>system SMS app</strong> with a prefilled message; <strong>you</strong> press Send. The app does <strong>not</strong> use the SEND_SMS or READ_CONTACTS permissions. Nearby phones can send an SOS <strong>delivery receipt</strong> (“Delivered: …”) and an <strong>“I'm coming”</strong> reply; a group can run a <strong>check-in</strong> (“I'm OK” / “I need help”). An opt-in <strong>lock-screen medical card</strong> (off by default), a <strong>6-month go-bag reminder</strong>, and the home-screen <strong>SOS widget</strong> and <strong>Quick Settings tile</strong> stay on the device; the widget and tile only open the confirmation countdown and never send an SOS by themselves.</li>
 </ul>
 <h2>1. Data that stays on your device</h2>
 <table>
@@ -41,6 +43,26 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <td>To run the offline chat</td>
 <td>Only on your phone. <strong>Excluded</strong> from Android cloud backup and device-to-device transfer.</td>
 </tr>
+<tr>
+<td><strong>Medical card</strong> (blood type, allergies, medications, conditions, emergency contact, notes) — optional, filled in by you</td>
+<td>To show a rescuer, and — only if you switch it on in an SOS — to add a short summary (never the notes)</td>
+<td>Only on your phone, <strong>encrypted</strong> (AES-256-GCM, key in the Android Keystore). <strong>Excluded</strong> from backup. Delete it in <strong>Medical card → Delete</strong>.</td>
+</tr>
+<tr>
+<td>Downloaded <strong>offline map areas</strong>, group radar settings, battery-saver setting, the time each chat device was first seen</td>
+<td>To show the map offline and run the radar, battery saver and spam protection</td>
+<td>Only on your phone. Positions of group members are kept <strong>in memory only</strong> and forgotten after an hour.</td>
+</tr>
+<tr>
+<td><strong>Emergency SMS contacts</strong> (name and phone number, up to 8) — optional, typed by you or picked from your contacts</td>
+<td>So you can also send an SOS through your system SMS app</td>
+<td>Only on your phone. <strong>Excluded</strong> from Android cloud backup and device-to-device transfer. The app itself never transmits these numbers.</td>
+</tr>
+<tr>
+<td>Lock-screen medical-card setting and <strong>6-month go-bag reminder</strong> (a toggle and timestamps)</td>
+<td>To show a short ICE summary on the lock screen if you opt in, and to remind you to check your kit</td>
+<td>Only on your phone. <strong>Excluded</strong> from backup.</td>
+</tr>
 </tbody>
 </table>
 <p>You can delete chat history in <strong>Chat → Messenger settings → Clear message history</strong>, and all app data by clearing the app's storage in Android settings or uninstalling the app. Step-by-step instructions: <a href="https://shaman-atta.github.io/atta-aid/delete/">Delete your data</a>.</p>
@@ -58,6 +80,7 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <li><strong>Group</strong> messages are encrypted (AES-GCM) with a key shared only through the group's QR / code. Relaying phones forward them but cannot read them. Anyone who has the group code can read group messages, so share it only with the group.</li>
 <li><strong>Direct messages</strong> are <strong>end-to-end encrypted</strong> (X25519 key agreement + AES-256-GCM): only the recipient's phone can read them; your nickname and text travel only inside the encrypted message. Relaying phones forward them but cannot read or change them; they can only see the sender and recipient device IDs and the time. A direct message is sent only once the recipient's public key is known. In each direct chat you can compare a <strong>safety code</strong> in person to check that nobody swapped the keys.</li>
 </ul>
+<p><strong>SOS receipts, “I'm coming” and group check-in:</strong> when someone receives your SOS, their phone can send a short <strong>delivery receipt</strong> (“Delivered: …”) and they can tap <strong>“I'm coming”</strong>. In a group, members can mark <strong>“I'm OK”</strong> or <strong>“I need help”</strong>, and the group owner can <strong>ask everyone to check in</strong>. These are ordinary mesh messages: they use the same encryption as the channel they travel on (the group key, end-to-end encryption for a direct SOS, or none on the open channel / an unencrypted SOS), contain a nickname and an SOS id, and go only to nearby phones.</p>
 <p><strong>We cannot delete messages</strong> from other people's phones, because there is no server. Google Play services processes the radio connection; see the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 <p><strong>Technical note:</strong> the Bluetooth / Wi-Fi link between two phones is encrypted by Nearby Connections. According to Google, when apps use the Nearby SDK, Google Play services collects usage analytics (discovery and connection latency, reliability and throughput, together with device model, country, build version and the app package name); you can allow or deny this in <strong>Settings → Google → Usage &amp; diagnostics</strong> (<a href="https://developers.google.com/nearby/connections/overview">source</a>). This is done by Google Play services, not by ATTA Aid, and does not include messages.</p>
 <h2>3. Children</h2>
@@ -74,8 +97,11 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <p>The app has <strong>no ads, no analytics SDK and no advertising ID</strong>, and we do not collect any personal information from children on our servers (we have none). Only nearby phones receive what is described in section 2. Parents can delete everything by clearing app data or uninstalling. We designed this mode with the US Children's Online Privacy Protection Act (COPPA), the EU/UK GDPR rules for children (including Art. 8) and the Israeli Protection of Privacy Law in mind. If you believe a child sent us personal data by e-mail, contact us and we will delete it.</p>
 <h2>4. Location</h2>
 <ul>
-<li><strong>My coordinates</strong> tool: your location is shown on screen only and is not stored or sent.</li>
-<li><strong>SOS in chat:</strong> your coordinates are sent only if you choose to include them.</li>
+<li><strong>My coordinates</strong> tool and the <strong>map</strong>: your position is shown on screen only and is not stored or sent.</li>
+<li><strong>SOS:</strong> your GPS coordinates, their accuracy and the time they were measured are added only while <strong>“Include my GPS location”</strong> is on (on by default for 13+, off by default in child mode). The SOS goes to the recipients you pick; “Everyone nearby” is not encrypted.</li>
+<li><strong>“Share my location” in a chat:</strong> only when you tap the button. In a <strong>group</strong> or a <strong>direct chat</strong> the coordinates travel <strong>inside the encryption</strong>. In the open <strong>“Everyone nearby”</strong> channel they are readable by everyone nearby, so the app asks you to confirm first; this is not available in child mode.</li>
+<li><strong>Group radar (“Where is my group”):</strong> only if you turn it on. While it is on, your position is sent about every 45 seconds (every 2 minutes with battery saver) <strong>only to members of your group, encrypted with the group key</strong>, and a notification shows that sharing is on; tap <strong>Stop</strong> at any time. To keep working with the screen off, the app runs a foreground service of type “location”; it uses only the “while using the app” location permission (no background-location permission). Children can use the radar only inside the group created by their teacher or parent. Members' positions are kept in memory on the receiving phones and forgotten after an hour; the group owner gets a warning if a member is farther than the chosen distance or has not been seen for 5 minutes.</li>
+<li><strong>Offline map:</strong> when you tap <strong>“Download area around me”</strong>, the app downloads map tiles for a limited area (at most 3,000 tiles or 50 MB) from <strong>OpenFreeMap</strong> (<code>tiles.openfreemap.org</code>, served via the Cloudflare network). Like any website, the server receives your <strong>IP address</strong>, the requested map tiles (which reveal the approximate area) and the app's name/version (User-Agent). No account, key or identifier of yours is sent. See the <a href="https://openfreemap.org/tos/">OpenFreeMap Terms of Service</a>. Map data © OpenStreetMap contributors (ODbL). Viewing the map later works offline.</li>
 <li>On Android 11 and older, Android requires the location permission to scan for nearby Bluetooth devices; the app does not use it to track you.</li>
 </ul>
 <h2>5. Reports and blocking</h2>
@@ -83,7 +109,7 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <h2>6. Support the project and feedback</h2>
 <p>There are <strong>no ads and no paid features</strong>. In <strong>Settings → Support the project</strong> you can rate the app on Google Play, share a link, or e-mail us feedback (your e-mail app sends us your message and address; we use it only to reply and delete it within 12 months). If we enable optional <strong>tips</strong> (voluntary in-app donations) in a future version, payment is handled entirely by <strong>Google Play Billing</strong>; we receive only an order confirmation, not your card details. Tips are hidden for users under 13 and unlock nothing.</p>
 <h2>7. Permissions</h2>
-<p>Bluetooth and Nearby devices / Wi-Fi (offline chat) · Location (coordinates, SOS, Bluetooth scan on old Android) · Notifications (new messages, background relay) · Camera is <strong>not</strong> requested (group QR codes are opened with your phone's own camera app) · Wake lock (keep the screen on for SOS signal). All permissions are optional; the guides work without them.</p>
+<p>Bluetooth and Nearby devices / Wi-Fi (offline chat) · Location (coordinates, SOS, Bluetooth scan on old Android) · Notifications (new messages, background relay) · Camera is <strong>not</strong> requested (group QR codes are opened with your phone's own camera app) · Wake lock (keep the screen on for SOS signal). All permissions are optional; the guides work without them. Foreground service “location” is used only while you share your position with the group radar. The app does <strong>not</strong> request the SEND_SMS or READ_CONTACTS permissions. If you add emergency contacts, you can type them or pick them with the system contact picker (which grants a one-time read of the chosen contact only). If you tick “Send SMS too” on an SOS, the app opens your system SMS app with a prefilled message; you decide whether to send it. The home-screen SOS widget and the Quick Settings tile only open the SOS confirmation and countdown; they never send an alert by themselves.</p>
 <h2>8. Legal bases (GDPR / UK GDPR)</h2>
 <p>Running the chat you turn on — <strong>performance of the service you request</strong> and our <strong>legitimate interest</strong> in providing it; sharing SOS location — <strong>your consent</strong> (or, for a child, the vital interests of the person in danger), which you can withdraw at any time; enabling chat for a child under 13 — <strong>consent of the parent or teacher</strong> given in the app; handling e-mailed reports and feedback — <strong>legitimate interest</strong> in keeping the community safe and answering you.</p>
 <h2>9. Your rights</h2>
@@ -97,7 +123,7 @@ footer{margin-top:40px;font-size:.85em;color:#666}@media(prefers-color-scheme:da
 <h2>10. Security and retention</h2>
 <p>Data on your phone is protected by Android app sandboxing; your private chat key is additionally protected by the Android Keystore. Direct messages are end-to-end encrypted (X25519 + AES-256-GCM); group messages are encrypted with AES-GCM using the group key; the “Everyone nearby” channel and SOS are intentionally not encrypted. On-device data is kept until you delete it; e-mailed reports and feedback up to 12 months.</p>
 <h2>11. Health information</h2>
-<p>ATTA Aid is an educational guide and <strong>not a medical device</strong>. It does not diagnose, treat, cure, or prevent any medical condition, and it does not ask for or store health data. Always seek professional medical help.</p>
+<p>ATTA Aid is an educational guide and <strong>not a medical device</strong>. It does not diagnose, treat, cure, or prevent any medical condition. The optional <strong>medical card</strong> is information <strong>you</strong> type in; it is stored <strong>only on your phone, encrypted</strong>, is never sent to us, and leaves the phone only as a short summary inside an SOS <strong>if you switch that on</strong> (off by default). Always seek professional medical help. You can optionally turn on a <strong>lock-screen medical card</strong> (off by default, with an in-app privacy warning). If you do, a low-priority public notification can show a short ICE summary (name, blood type, allergies, emergency contact) on the lock screen so a rescuer can read it without unlocking the phone. The medical-card file itself remains encrypted and excluded from backup.</p>
 <h2>12. Changes</h2>
 <p>We will post changes on this page and update the effective date. Significant changes (for example, enabling tips) will also be shown in the app.</p>
 <h2>Contact</h2>
